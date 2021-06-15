@@ -1,0 +1,13 @@
+const VERTEX_SHADER_SOURCE = `
+
+	attribute vec4 a_Position;
+
+	uniform mat4 u_ModelMatrix;
+
+	void main() {
+
+		gl_Position = u_ModelMatrix * a_Position;
+	}
+`;
+
+export default VERTEX_SHADER_SOURCE;
