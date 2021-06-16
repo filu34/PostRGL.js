@@ -7,10 +7,9 @@ import Compile_Shader from "./Compile_Shader.js";
 // Second: Create Program.
 // Third: Attach Shaders to Program.
 // Fourth: Link Program to Context.
+// Fifth: Use Program.
 
 function Create_Program ( Context, VERTEX_SHADER, FRAGMENT_SHADER ) {
-
-	let gl = Context;
 
 	const COMPILED_VERTEX_SHADER = Compile_Shader ( Context, Context. VERTEX_SHADER, VERTEX_SHADER );
 
@@ -38,7 +37,7 @@ function Create_Program ( Context, VERTEX_SHADER, FRAGMENT_SHADER ) {
 
 	Context. attachShader	( PROGRAM, COMPILED_FRAGMENT_SHADER);
 
-	Context. linkProgram		( PROGRAM );
+	Context. linkProgram	( PROGRAM );
 
 	let Linked = Context. getProgramParameter ( PROGRAM, Context. LINK_STATUS );
 
@@ -56,6 +55,12 @@ function Create_Program ( Context, VERTEX_SHADER, FRAGMENT_SHADER ) {
 
 		return null;
 	};
+
+	Context. useProgram ( PROGRAM );
+
+	// Asign PROGRAM to WebGL's Context attribute "program", which will be availble from Context.
+
+	Context. program = PROGRAM;
 
 	return PROGRAM;
 };
