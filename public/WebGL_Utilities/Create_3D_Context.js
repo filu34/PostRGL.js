@@ -1,3 +1,5 @@
+import WebGLUtils from "./WebGLUtils.js";
+
 // Function that tries to set one of WebGL Context from list of their names.
 
 function Create_3D_Context( Canvas ) {
@@ -22,6 +24,9 @@ function Create_3D_Context( Canvas ) {
 		console. log ( "Your browser doesn't support WebGL. \n Please enable it, change browser, or look for errors." );
 	};
 
+	WebGLUtils.Context = Context;
+
+	console.log(WebGLUtils.Context);
 
 	return Context;
 };

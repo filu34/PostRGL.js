@@ -1,3 +1,4 @@
+import WebGLUtils from "./WebGLUtils.js";
 import Compile_Shader from "./Compile_Shader.js";
 
 // Function that creates program, attach Shaders, and link it together.
@@ -59,6 +60,8 @@ function Create_Program ( Context, VERTEX_SHADER, FRAGMENT_SHADER ) {
 	Context. useProgram ( PROGRAM );
 
 	// Asign PROGRAM to WebGL's Context attribute "program", which will be availble from Context.
+	
+	WebGLUtils. Program = PROGRAM;
 
 	Context. program = PROGRAM;
 

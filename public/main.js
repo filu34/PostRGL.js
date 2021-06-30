@@ -1,21 +1,18 @@
-import Initialization from "./WebGL_Utilities/Initialization.js";
-import Initialize_Array_Buffer from "./WebGL_Utilities/Initialize_Array_Buffer.js";
+import WebGLUtils from "./WebGL_Utilities/WebGLUtils.js";
 
 function main () {
 
-	const { Canvas, Context, Program } = Initialization(); 
+	let { Initialization } = WebGLUtils;
 
-	let Triangle = [
-		-0.5, 0.5,
-		-0.5, -0.2,
-		0.5, -0.2
-	];
+	let Vertices = [
+                -0.5, 0.5,
+                -0.5, -0.2,
+                0.5, -0.2
+        ];
 
-	if ( ! Initialize_Array_Buffer ( Context, 'a_Position', Triangle, Context.FLOAT, 3) ) {
-		
-		console. log ( `Couldn't initialize Array_Buffer for 'a_Position'.` );
-		return -1;
-	};
+	const { Canvas, Context, Program } = Initialization ( Vertices, "2D" ); 
+
+	console.log ( WebGLUtils.Atomized_Shader );
 };
 
 main();

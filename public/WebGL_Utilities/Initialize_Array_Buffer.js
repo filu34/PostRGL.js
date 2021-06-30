@@ -1,3 +1,5 @@
+import WebGLUtils from "./WebGLUtils.js";
+
 function Initialize_Array_Buffer( Context, Attribute, Data_Array, Type, Size_of_Vertices) {
 
 	let Buffer = Context. createBuffer ();
@@ -22,6 +24,8 @@ function Initialize_Array_Buffer( Context, Attribute, Data_Array, Type, Size_of_
 	Context. vertexAttribPointer ( a_Attribute, Size_of_Vertices, Type, false, 0, 0);
 
 	Context. enableVertexAttribArray ( a_Attribute );
+
+	console.log(WebGLUtils);
 
 	return true;
 };

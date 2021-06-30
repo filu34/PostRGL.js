@@ -1,3 +1,4 @@
+import Initialization			from "./Initialization.js";
 import Create_Canvas			from "./Create_Canvas.js";
 import Create_3D_Context		from "./Create_3D_Context.js";
 import Create_Program			from "./Create_Program.js";
@@ -8,6 +9,8 @@ import Initialize_Array_Buffer		from "./Initialize_Array_Buffer.js";
 import Initialize_Array_Buffer_Shader	from "./Initialize_Array_Buffer_From_Shader.js";
 
 const WebGLUtils = {
+
+	Initialization,
 	Create_Canvas,
 	Create_3D_Context,
 	Create_Program,
