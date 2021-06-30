@@ -1,6 +1,6 @@
 import WebGLUtils from "./WebGLUtils.js";
 
-function Initialize_Array_Buffer_Shader( Context, Vertices ) {
+function Initialize_Array_Buffer_Shader( Context, Vertices, Size_of_Vertices ) {
 
 	console. log ( WebGLUtils );
 	
@@ -39,7 +39,7 @@ function Initialize_Array_Buffer_Shader( Context, Vertices ) {
 			
 			console. log ( `${ Element[0] } : ${ Element[2] }` );
 
-			Initialize_Array_Buffer ( WebGLUtils.Context, Element[2], WebGLUtils.Vertices, WebGLUtils.Context.FLOAT, 2 );
+			Initialize_Array_Buffer ( WebGLUtils.Context, Element[2], WebGLUtils.Vertices, WebGLUtils.Context.FLOAT, Size_of_Vertices );
 		};
 	};
 

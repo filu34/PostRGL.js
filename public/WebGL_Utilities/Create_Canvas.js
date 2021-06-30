@@ -5,7 +5,8 @@ let {
 	Get_Body_Tag, 
 	Create_Canvas_Element, 
 	Append_Canvas,
-	Set_WebGL_Attribute 
+	Set_WebGL_Attribute,
+	Resize_Canvas_in_CSS
 } = Create_Canvas_Imports;
 
 
@@ -17,7 +18,7 @@ function Create_Canvas() {
 	// Get <body> tag from your basic HTML document.
 
 	const Body_Tag = Get_Body_Tag();
-		
+	
 	
 	// Create <canvas> element in your document.
 
@@ -25,6 +26,7 @@ function Create_Canvas() {
 
 	console.log(Canvas);
 	console.log(Body_Tag);
+
 
 	// Add <canvas> element to <body> element. 
 

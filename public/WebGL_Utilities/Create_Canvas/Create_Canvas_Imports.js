@@ -1,7 +1,7 @@
-import Get_Body_Tag from "./Get_Body_Tag.js";
-import Create_Canvas_Element from "./Create_Canvas_Element.js";
-import Append_Canvas from "./Append_Canvas.js";
-import Set_WebGL_Attribute from "./Set_WebGL_Attribute.js";
+import Get_Body_Tag 		from "./Get_Body_Tag.js";
+import Create_Canvas_Element 	from "./Create_Canvas_Element.js";
+import Append_Canvas 		from "./Append_Canvas.js";
+import Set_WebGL_Attribute 	from "./Set_WebGL_Attribute.js";
 
 const Create_Canvas_Imports = {
 
