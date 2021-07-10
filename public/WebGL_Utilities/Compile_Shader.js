@@ -17,14 +17,17 @@ function Compile_Shader( Context, Shader_Type, Shader_Source ) {
 		return null;
 	};
 
+
 	// Pass "Source" of a shader into WebGl Context to newely created shader of specific type. 
 
 	Context. shaderSource ( Shader, Shader_Source );
 
+	
 	// Compile "Shader Source" together with created shader of specific "Type".
 
 	Context. compileShader ( Shader );
 
+	
 	// Check if succeed.
 
 	const Compilation_Success = Context. getShaderParameter ( Shader, Context. COMPILE_STATUS );
